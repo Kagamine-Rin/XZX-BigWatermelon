@@ -1404,7 +1404,7 @@ window.__require = function e(t, n, o) {
         cc._RF.push(t, "197e1hfNnxIcJx73V3VhUxY", "HttpManagerJs");
         var a = e("GameConfig"),
             i = (c(o = {
-                // URL: "",
+                URL: "",
                 cacheList: null,
                 isBusy: null,
                 req: null,
@@ -1771,16 +1771,16 @@ window.__require = function e(t, n, o) {
             },
             play: function() {
                 var e = this;
-                // adBreak({
-                //     type: "next",
-                //     name: "restart-game",
-                //     beforeBreak: function() {
-                //         e.enableButtons()
-                //     },
-                //     afterBreak: function() {
-                //         e.enableButtons()
-                //     }
-                // })
+                adBreak({
+                     type: "next",
+                     name: "restart-game",
+                     beforeBreak: function() {
+                     e.enableButtons()
+                     },
+                     afterBreak: function() {
+                         e.enableButtons()
+                     }
+                 })
             },
             enableButtons: function() {},
             addTouchEvents: function() {
