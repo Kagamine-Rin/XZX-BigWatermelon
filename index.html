@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>合成大几吧</title>
+    <title>合成大主席</title>
 
     <!--http://www.html5rocks.com/en/mobile/mobifying/-->
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1" />
@@ -76,7 +76,7 @@
 
     <div id="adContainer" style="display:none;position: absolute;top:0px;left: 0px;width:100%;height:100%;z-index:999;"></div>
     <div id="loadingText" style="width:100%;display: none;text-align:center;position:absolute;top:45%;z-index:2;font-size:20px;color:#f99f0a">
-        正在偷几吧...0%
+        xzxwswj...0%
     </div>
 
     <div id="splash">
@@ -111,11 +111,11 @@
             //        console.log("window.navigator.language",window.navigator.language);
 
             if (window.navigator.language == "zh-CN" || window.navigator.language == "zh-cn") {
-                document.title = "合成大几吧";
+                document.title = "合成大主席";
             } else if (window.navigator.language == "ja-JP") {
-                document.title = "Little game：Mix your HugeCock";
+                document.title = "合成大主席";
             } else {
-                document.title = "Little game：Mix your HugeCock";
+                document.title = "Craft Big Chairman";
             }
         }
 
@@ -154,7 +154,7 @@
                 if (!loadintT) {
                     return;
                 }
-                loadintT.innerHTML = '正在偷几吧......' + parseInt(tempSeconds) + '%';
+                loadintT.innerHTML = 'xzxwswj......' + parseInt(tempSeconds) + '%';
 
                 switch (tempSeconds) {
                     case 20:
@@ -187,7 +187,7 @@
                 if (tempSeconds > 100) {
                     clearInterval(timer);
                     tempSeconds = 100
-                    loadintT.innerHTML = '正在偷几吧......' + parseInt(tempSeconds) + '%';
+                    loadintT.innerHTML = 'xzxwswj......' + parseInt(tempSeconds) + '%';
                 }
             }, t * 1000);
         }
@@ -199,8 +199,6 @@
             }
         }
 
-
-        /*setTimeout("ShowBannerAD()","2000");*/
     </script>
 
 
@@ -222,9 +220,6 @@
             var splash = document.getElementById('splash');
             splash.style.display = 'block';
 
-
-            console.log("indexlTextTTTT");
-
             var cocos2d = document.createElement('script');
             cocos2d.async = true;
             cocos2d.src = window._CCSettings.debug ? 'cocos2d-js.js' : 'cocos2d-js-min.js';
@@ -240,9 +235,6 @@
     </script>
 
 
-
-确定不来看看GitHub上的项目然后丢个star吗(星星眼) 
-<a href="https://github.com/CHonesetDoPa/Mix-C/"  target="opentype">点！这！里！</a>
 </body>
 
 </html>
