@@ -1105,7 +1105,7 @@ window.__require = function e(t, n, o) {
             m = function(e) {
                 function t() {
                     var t = null !== e && e.apply(this, arguments) || this;
-                    // return t.bgLayer = null, t.bgCamera = null, t.mainCamera = null, t.fruitNode = null, t.lineNode = null, t.bazieffect = null, t.downEffect = null, t.fruitPre = null, t.fruitS = [], t.step = 0, t.guideTime = 0, t.targetFruit = null, t.fruitHeigth = -1200, t.endOne = 0, t
+                    return t.bgLayer = null, t.bgCamera = null, t.mainCamera = null, t.fruitNode = null, t.lineNode = null, t.bazieffect = null, t.downEffect = null, t.fruitPre = null, t.fruitS = [], t.step = 0, t.guideTime = 0, t.targetFruit = null, t.fruitHeigth = -1200, t.endOne = 0, t
                 }
                 var n;
                 return o(t, e), n = t, t.prototype.onLoad = function() {
@@ -1770,7 +1770,6 @@ window.__require = function e(t, n, o) {
                 o.mainGameJs = this, o.publicGameBool || this.play()
             },
             play: function() {
-                console.log(1);
                 var e = this;
                 // adBreak({
                 //     type: "next",
