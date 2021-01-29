@@ -1404,7 +1404,6 @@ window.__require = function e(t, n, o) {
         cc._RF.push(t, "197e1hfNnxIcJx73V3VhUxY", "HttpManagerJs");
         var a = e("GameConfig"),
             i = (c(o = {
-                URL: "",
                 cacheList: null,
                 isBusy: null,
                 req: null,
@@ -1771,16 +1770,16 @@ window.__require = function e(t, n, o) {
             },
             play: function() {
                 var e = this;
-                adBreak({
-                     type: "next",
-                     name: "restart-game",
-                     beforeBreak: function() {
-                     e.enableButtons()
-                     },
-                     afterBreak: function() {
-                         e.enableButtons()
-                     }
-                 })
+                // adBreak({
+                //      type: "next",
+                //      name: "restart-game",
+                //      beforeBreak: function() {
+                //      e.enableButtons()
+                //      },
+                //      afterBreak: function() {
+                //          e.enableButtons()
+                //      }
+                //  })
             },
             enableButtons: function() {},
             addTouchEvents: function() {
@@ -1815,15 +1814,12 @@ window.__require = function e(t, n, o) {
             gameEnd1: function() {
                 var e = this,
                     t = this.returnCurrentLanType();
-                1 == t ? (this.gameOverT1.string = "游戏结束", this.gameOverT2.string = "刮开有奖") : 2 == t ? (this.gameOverT1.string = "刮开有奖", this.gameOverT2.string = "刮开有奖") : 4 == t ? (this.gameOverT1.string = "刮开有奖", this.gameOverT2.string = "刮开有奖") : (this.gameOverT1.string = "Game Over", this.gameOverT2.string = "Click to view the score"), this.gameOveEndBool = !0, this.gameOverT1.node.zIndex = 999, this.gameOverT2.node.zIndex = 999, this.gameOverToEnd.zIndex = 999, this.gameOverT1.node.opacity = 0, this.gameOverT1.node.y = 100, this.gameOverToEnd.y = 0, this.gameOverT1.node.runAction(cc.sequence(cc.delayTime(.2), cc.spawn(cc.fadeIn(1), cc.moveBy(1, 0, -50)), cc.delayTime(.3))), this.gameOverToEnd.runAction(cc.sequence(cc.fadeTo(1, 100), cc.callFunc(function() {
+                1 == t ? (this.gameOverT1.string = "游戏结束", this.gameOverT2.string = "点击重新开始") : 2 == t ? (this.gameOverT1.string = "点击重新开始", this.gameOverT2.string = "刮开有奖") : 4 == t ? (this.gameOverT1.string = "刮开有奖", this.gameOverT2.string = "刮开有奖") : (this.gameOverT1.string = "Game Over", this.gameOverT2.string = "Click to view the score"), this.gameOveEndBool = !0, this.gameOverT1.node.zIndex = 999, this.gameOverT2.node.zIndex = 999, this.gameOverToEnd.zIndex = 999, this.gameOverT1.node.opacity = 0, this.gameOverT1.node.y = 100, this.gameOverToEnd.y = 0, this.gameOverT1.node.runAction(cc.sequence(cc.delayTime(.2), cc.spawn(cc.fadeIn(1), cc.moveBy(1, 0, -50)), cc.delayTime(.3))), this.gameOverToEnd.runAction(cc.sequence(cc.fadeTo(1, 100), cc.callFunc(function() {
                     e.gameOverToEnd.getComponent(cc.Button).enabled = !0
                 }))), this.gameOverT2.node.opacity = 0, this.gameOverT2.node.y = this.gameOverT1.node.y - 100, this.gameOverT2.node.runAction(cc.sequence(cc.delayTime(.2), cc.spawn(cc.fadeIn(1), cc.moveBy(1, 0, -50)), cc.delayTime(.3))), this.gameOverT2.node.runAction(cc.sequence(cc.delayTime(2), cc.scaleTo(.3, 1.2).easing(cc.easeSineInOut()), cc.scaleTo(.3, 1).easing(cc.easeSineInOut()))).repeatForever()
             },
             initEndLayer: function() {
-                this.gameOverT1.node.active = !1, this.gameOverT2.node.active = !1, this.gameOverToEnd.active = !1, o.publicGameBool || adBreak({
-                    type: "next",
-                    name: "restart-game"
-                }), a.gotoEndLayer1()
+                this.gameOverT1.node.active = !1, this.gameOverT2.node.active = !1, this.gameOverToEnd.active = !1, a.gotoEndLayer1()
             },
             start: function() {},
             update: function(e) {
@@ -1836,10 +1832,11 @@ window.__require = function e(t, n, o) {
                 o.gameScore = e
             },
             RestartGame: function() {
-                o.GAME_OVER_BOOL = !0, o.gameScore = 0, o.publicGameBool || adBreak({
-                    type: "next",
-                    name: "restart-game"
-                }), c.loadingScene("MainGameScene")
+                // o.GAME_OVER_BOOL = !0, o.gameScore = 0, o.publicGameBool || adBreak({
+                //     type: "next",
+                //     name: "restart-game"
+                // }), c.loadingScene("MainGameScene")
+                o.GAME_OVER_BOOL = !0, o.gameScore = 0, c.loadingScene("MainGameScene")
             },
             SetGameEndScore: function() {
                 a.gameOverShowText(o.gameScore, 1)
